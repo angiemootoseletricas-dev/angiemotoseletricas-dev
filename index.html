@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0E13">
+<meta name="description" content="Angie Motos — motos e scooters 100% elétricas em São Paulo/SP. Varejo e atacado, preço transparente, garantia de fábrica e aprovação consultando seu score em minutos.">
+<title>Angie Motos — Motos e Scooters Elétricas · Varejo &amp; Atacado</title>
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="preload" as="image" href="img/lwone-1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angie Motos">
+<meta property="og:title" content="Angie Motos — Motos e Scooters Elétricas · Varejo & Atacado">
+<meta property="og:description" content="Catálogo com preço à vista, garantia de fábrica e aprovação consultando seu score em minutos. Showroom em São Paulo/SP.">
+<meta property="og:image" content="img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════════════
+   TEMA — para mudar o visual da loja inteira, edite só isto:
+   --bg fundo | --accent cor principal | --accent2 cor apoio
+   ════════════════════════════════════════════════════════ */
+:root{
+  --bg:#0B0E13; --bg2:#10151D; --surface:#141B25; --line:#232F3F;
+  --txt:#EEF2F7; --muted:#98A6B8;
+  --accent:#F0B429; --accent2:#FF8A3D;
+  --grad:linear-gradient(120deg,#F0B429,#FF8A3D);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Archivo',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--txt);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.wrap{width:min(1200px,92vw);margin:0 auto}
+
+/* ── barra superior ─────────────────────────────── */
+.topbar{background:#07090C;border-bottom:1px solid var(--line);font-size:.76rem;color:var(--muted);letter-spacing:.06em}
+.topbar .wrap{display:flex;justify-content:center;gap:28px;padding:9px 0;flex-wrap:wrap;text-align:center}
+.topbar b{color:var(--accent);font-weight:700}
+
+/* ── header ─────────────────────────────────────── */
+header{position:sticky;top:0;z-index:90;background:rgba(11,14,19,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+/* Logo oficial Angie Motos — arquivo img/logo.png */
+.brand img{width:46px;height:46px;border-radius:12px}
+.brand-name{font-weight:900;font-size:1.02rem;letter-spacing:.08em;text-transform:uppercase;line-height:1.05}
+.brand-name small{display:block;font-size:.56rem;font-weight:700;color:var(--accent);letter-spacing:.34em}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-size:.82rem;font-weight:700;letter-spacing:.05em;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--txt)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.burger{display:none;background:none;border:0;width:42px;height:42px;position:relative}
+.burger i,.burger i::before,.burger i::after{content:"";position:absolute;left:8px;width:26px;height:2px;background:var(--txt);transition:.3s}
+.burger i{top:20px}.burger i::before{left:0;top:-8px}.burger i::after{left:0;top:8px}
+
+/* ── botões ─────────────────────────────────────── */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.8rem;padding:.95rem 1.7rem;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn-primary{background:var(--grad);color:#1A1205;box-shadow:0 10px 34px rgba(240,180,41,.25)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(240,180,41,.38)}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn-sm{padding:.72rem 1.05rem;font-size:.72rem}
+
+/* ── hero ───────────────────────────────────────── */
+.hero{position:relative;min-height:94vh;display:flex;align-items:flex-end;background:url('img/lwone-1.jpg') center 32%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,14,19,.62) 0%,rgba(11,14,19,.30) 42%,rgba(11,14,19,.97) 96%)}
+.hero-inner{position:relative;padding:130px 0 56px;width:min(1200px,92vw);margin:0 auto}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-weight:800;letter-spacing:.3em;font-size:.72rem;text-transform:uppercase;margin-bottom:22px}
+.kicker::before{content:"";width:34px;height:2px;background:var(--accent)}
+.hero h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:.97;font-weight:900;text-transform:uppercase;letter-spacing:-.015em;max-width:15ch}
+.hero h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1.5px var(--accent)}
+.hero p.sub{margin:24px 0 34px;max-width:56ch;color:#C4CEDA;font-size:1.05rem}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.stats{margin-top:66px;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.14)}
+.stat{padding:22px 18px 0;border-left:1px solid rgba(255,255,255,.09)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-size:clamp(1.35rem,2.6vw,2rem);font-weight:900;letter-spacing:-.01em}
+.stat b span{color:var(--accent)}
+.stat small{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em}
+
+/* ── letreiro ──────────────────────────────────── */
+.marquee{overflow:hidden;border-bottom:1px solid var(--line);background:var(--bg2)}
+.mq-track{display:flex;width:max-content;animation:mq 30s linear infinite}
+.mq-track span{padding:15px 0;margin-right:52px;font-size:.78rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.mq-track span::after{content:"✦";margin-left:52px;color:var(--accent)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ── seções ────────────────────────────────────── */
+section{padding:96px 0}
+.sec-head{margin-bottom:46px}
+.sec-head .kicker{margin-bottom:14px}
+h2.sec-title{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:900;text-transform:uppercase;line-height:1.0;letter-spacing:-.015em}
+.sec-head p{color:var(--muted);max-width:62ch;margin-top:16px;font-size:.98rem}
+
+/* ranking */
+.rank{border-top:1px solid var(--line)}
+.rank-row{display:grid;grid-template-columns:230px 1fr 70px;gap:20px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+.rank-name b{display:block;font-weight:800}
+.rank-name small{color:var(--muted);font-size:.74rem}
+.rank-bar{height:14px;background:var(--surface);border-radius:99px;overflow:hidden}
+.rank-bar i{display:block;height:100%;width:0;border-radius:99px;background:var(--grad);transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.rank-val{font-weight:900;font-size:1.3rem;text-align:right}
+.src-note{margin-top:18px;color:var(--muted);font-size:.76rem}
+
+/* catálogo */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.tab{padding:.72rem 1.3rem;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);font-weight:800;font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;transition:.2s}
+.tab:hover{color:var(--txt);border-color:#3A4B62}
+.tab.active{background:var(--txt);color:#0B0E13;border-color:var(--txt)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(315px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 26px 60px rgba(0,0,0,.55);border-color:#31405A}
+.card-img{aspect-ratio:16/10;overflow:hidden;position:relative;background:radial-gradient(70% 70% at 50% 42%,#1B2536 0%,#0C1119 100%)}
+.card-img img{width:100%;height:100%;object-fit:contain;padding:16px;transition:transform .5s}
+.card:hover .card-img img{transform:scale(1.055)}
+.tag{position:absolute;top:14px;left:14px;z-index:2;background:rgba(11,14,19,.85);border:1px solid var(--line);backdrop-filter:blur(6px);color:var(--accent);font-size:.62rem;font-weight:800;letter-spacing:.14em;padding:.48rem .72rem;border-radius:999px;text-transform:uppercase}
+.tag.hot{background:var(--grad);color:#0B0E13;border:0}
+.card-body{padding:20px;display:flex;flex-direction:column;gap:13px;flex:1}
+.card-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.card h3{font-size:1.22rem;font-weight:800;letter-spacing:-.01em}
+.origin{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-size:.7rem;font-weight:600;color:var(--muted);border:1px solid var(--line);padding:.42rem .62rem;border-radius:8px;background:var(--bg2)}
+.chip b{color:var(--txt);font-weight:800}
+.price-row{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:4px}
+.price small{display:block;font-size:.64rem;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.price b{font-size:1.5rem;font-weight:900;letter-spacing:-.02em}
+.price-note{font-size:.68rem;color:var(--muted);text-align:right;max-width:45%}
+.card-actions{display:flex;gap:9px}
+.card-actions .btn-flex{flex:1}
+
+/* modal detalhes */
+.modal{position:fixed;inset:0;z-index:120;display:none}
+.modal.open{display:block}
+.modal-bg{position:absolute;inset:0;background:rgba(4,6,10,.8);backdrop-filter:blur(9px)}
+.modal-panel{position:relative;z-index:2;width:min(1080px,94vw);max-height:92vh;overflow-y:auto;background:var(--bg2);border:1px solid var(--line);border-radius:24px;margin:4vh auto;display:grid;grid-template-columns:1.05fr 1fr}
+.close-x{position:absolute;top:16px;right:16px;z-index:5;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:rgba(11,14,19,.8);color:var(--txt);font-size:1.15rem;line-height:1}
+.close-x:hover{border-color:var(--accent);color:var(--accent)}
+.gal{padding:26px}
+.gal-main{aspect-ratio:16/11;background:radial-gradient(70% 70% at 50% 42%,#1B2536 0%,#0C1119 100%);border:1px solid var(--line);border-radius:16px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.gal-main img{max-width:100%;max-height:100%;object-fit:contain;padding:14px}
+.gal-thumbs{display:flex;gap:10px;margin-top:12px}
+.gal-thumbs button{width:86px;height:58px;border-radius:10px;border:1px solid var(--line);background:var(--surface);overflow:hidden;padding:0;transition:border-color .2s}
+.gal-thumbs button img{width:100%;height:100%;object-fit:contain;padding:4px}
+.gal-thumbs button.on,.gal-thumbs button:hover{border-color:var(--accent)}
+.info{padding:30px 30px 34px}
+.info h3{font-size:1.7rem;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;margin-top:8px}
+.info .origin{display:block;margin-top:4px}
+.ficha{margin:20px 0;border-top:1px solid var(--line)}
+.ficha div{display:flex;justify-content:space-between;gap:16px;padding:10.5px 0;border-bottom:1px solid var(--line);font-size:.85rem}
+.ficha dt{color:var(--muted);flex-shrink:0}
+.ficha dd{font-weight:600;text-align:right}
+.parcelas{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:18px}
+.parcelas label{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:8px}
+.parcelas label output{color:var(--accent)}
+.parcelas input[type=range]{width:100%;accent-color:var(--accent);margin-bottom:14px}
+.parc-select{display:flex;gap:8px;margin-bottom:14px}
+.parc-select button{flex:1;padding:.6rem;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--muted);font-weight:800;font-size:.78rem}
+.parc-select button.on{background:var(--txt);color:#0B0E13;border-color:var(--txt)}
+.parc-result{display:flex;justify-content:space-between;align-items:baseline}
+.parc-result b{font-size:1.45rem;font-weight:900}
+.parc-result small{color:var(--muted);font-size:.72rem}
+
+/* score */
+.score-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:start}
+.steps{list-style:none;margin-top:34px;display:grid;gap:20px}
+.steps li{display:flex;gap:16px;align-items:flex-start}
+.steps .n{flex-shrink:0;width:40px;height:40px;border-radius:999px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--accent)}
+.steps b{display:block;font-weight:800}
+.steps p{color:var(--muted);font-size:.86rem}
+.score-card{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:32px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.68rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input,.field select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--txt);font-family:inherit;font-size:.95rem;padding:.95rem 1.1rem;outline:none;transition:border-color .2s}
+.field input:focus,.field select:focus{border-color:var(--accent)}
+.field .err{display:none;color:#FF8A7A;font-size:.74rem;margin-top:6px}
+.field.bad .err{display:block}
+.field.bad input{border-color:#FF8A7A}
+.link-teste{background:none;border:0;color:var(--accent2);font-size:.76rem;font-weight:700;text-decoration:underline;margin-top:8px;padding:0}
+.score-progress{display:none;margin-top:6px}
+.score-progress .step{display:flex;align-items:center;gap:13px;padding:11px 0;color:var(--muted);font-size:.9rem;font-weight:600}
+.score-progress .step.active{color:var(--txt)}
+.score-progress .step.done{color:var(--accent)}
+.spin{width:16px;height:16px;border-radius:50%;border:2px solid var(--line);border-top-color:var(--accent);flex-shrink:0;opacity:0}
+.step.active .spin{opacity:1;animation:sp .8s linear infinite}
+.step.done .spin{opacity:0}
+.step.done::after{content:"✓";color:var(--accent);font-weight:900}
+@keyframes sp{to{transform:rotate(360deg)}}
+.score-result{display:none;text-align:center;margin-top:8px}
+.gauge{width:210px;margin:6px auto 0}
+.gauge svg{overflow:visible}
+.gauge .track{fill:none;stroke:var(--bg);stroke-width:14;stroke-linecap:round}
+.gauge .val{fill:none;stroke:var(--accent);stroke-width:14;stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(.2,.7,.2,1),stroke .4s}
+.score-num{font-size:3.1rem;font-weight:900;letter-spacing:-.02em;line-height:1}
+.score-num small{display:block;font-size:.66rem;font-weight:800;letter-spacing:.24em;color:var(--muted);text-transform:uppercase;margin-top:8px}
+.tier-pill{display:inline-block;margin:16px 0 6px;padding:.55rem 1.1rem;border-radius:999px;font-size:.7rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.tier-pill.alto{background:rgba(62,233,197,.12);color:#3EE9C5;border:1px solid rgba(62,233,197,.4)}
+.tier-pill.medio{background:rgba(200,255,61,.1);color:var(--accent);border:1px solid rgba(200,255,61,.4)}
+.tier-pill.baixo{background:rgba(255,159,67,.1);color:#FF9F43;border:1px solid rgba(255,159,67,.4)}
+.conds{margin:18px 0 22px;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:18px}
+.conds div{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.84rem}
+.conds div:last-child{border-bottom:0}
+.conds dt{color:var(--muted)}
+.conds dd{font-weight:800;text-align:right}
+.conds dd.hl{color:var(--accent)}
+.result-actions{display:flex;gap:10px}
+.result-actions .btn-flex{flex:1}
+.disclaimer{margin-top:16px;font-size:.68rem;color:var(--muted)}
+
+/* comparativo */
+.cmp-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:18px}
+table.cmp{width:100%;border-collapse:collapse;min-width:760px;background:var(--surface)}
+table.cmp th,table.cmp td{padding:15px 18px;border-bottom:1px solid var(--line);text-align:left;font-size:.88rem;vertical-align:top}
+table.cmp thead th{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--bg2)}
+table.cmp tbody tr:last-child td{border-bottom:0}
+table.cmp td:first-child{color:var(--muted);font-size:.74rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+table.cmp td b{font-weight:800}
+.best{color:var(--accent)!important;font-weight:800!important}
+
+/* economia */
+.econ{background:var(--bg2);border-block:1px solid var(--line)}
+.econ-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.econ-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:30px}
+.econ-card .big{font-size:clamp(2rem,3.4vw,2.9rem);font-weight:900;letter-spacing:-.02em;line-height:1.05}
+.econ-card .big span{color:var(--accent)}
+.econ-card p{color:var(--muted);font-size:.86rem;margin-top:12px}
+.econ-card ul{list-style:none;margin-top:14px;display:grid;gap:9px}
+.econ-card li{font-size:.85rem;color:#C4CEDA;padding-left:22px;position:relative}
+.econ-card li::before{content:"⚡";position:absolute;left:0;color:var(--accent);font-size:.75rem}
+
+/* depoimentos */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px;display:flex;flex-direction:column;gap:18px}
+.quote p{font-size:.95rem;color:#CDD6E1}
+.quote p b{color:var(--txt)}
+.quote-who{display:flex;align-items:center;gap:13px;margin-top:auto}
+.avatar{width:44px;height:44px;border-radius:999px;background:var(--grad);color:#0B0E13;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.9rem}
+.quote-who b{display:block;font-size:.88rem}
+.quote-who small{color:var(--muted);font-size:.74rem}
+
+/* faq */
+.faq{max-width:820px}
+.faq-item{border:1px solid var(--line);border-radius:16px;margin-bottom:12px;background:var(--surface);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:0;color:var(--txt);font-family:inherit;font-weight:700;font-size:.98rem;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q::after{content:"+";font-size:1.5rem;font-weight:400;color:var(--accent);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a p{padding:0 22px 20px;color:var(--muted);font-size:.9rem}
+.faq-item.open .faq-a{max-height:340px}
+
+/* cta final + footer */
+.cta-final{background:radial-gradient(90% 140% at 50% 0%,#182338 0%,var(--bg) 60%);text-align:center;padding:110px 0}
+.cta-final h2{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;max-width:22ch;margin:0 auto 18px}
+.cta-final p{color:var(--muted);max-width:52ch;margin:0 auto 34px}
+footer{border-top:1px solid var(--line);background:#080A0E;padding:64px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:48px}
+footer h4{font-size:.7rem;font-weight:900;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+footer ul{list-style:none;display:grid;gap:10px;font-size:.86rem}
+footer ul a{color:#C4CEDA}
+footer ul a:hover{color:var(--accent)}
+.foot-brand p{color:var(--muted);font-size:.84rem;margin-top:14px;max-width:34ch}
+.foot-bottom{border-top:1px solid var(--line);padding:20px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.7rem;color:var(--muted)}
+.whats-float{position:fixed;right:22px;bottom:22px;z-index:110;width:58px;height:58px;border-radius:999px;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.4);transition:transform .2s}
+.whats-float:hover{transform:translateY(-3px) scale(1.04)}
+.whats-float svg{width:29px;height:29px;fill:#0B0E13}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ── loja & revendedores ─────────────────────────────── */
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}
+.rev-photo{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.rev-photo img{width:100%;height:380px;object-fit:cover;display:block}
+.rev-photo figcaption{padding:12px 14px;font-size:.82rem;font-weight:700;color:var(--muted);border-top:1px solid var(--line)}
+.rev-card{margin-top:20px;background:linear-gradient(135deg,var(--surface),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:30px;display:grid;grid-template-columns:1.4fr 1fr;gap:30px}
+.rev-card h3{font-size:1.45rem}
+.rev-card p{color:var(--muted);margin-top:10px;line-height:1.65;font-size:.95rem}
+.rev-list{list-style:none;display:grid;gap:8px;margin:16px 0 20px;font-size:.92rem}
+.rev-list li::before{content:"✓ ";color:var(--accent);font-weight:900}
+.rev-info{display:grid;gap:16px;align-content:start}
+.rev-info small{display:block;color:var(--accent);font-weight:800;letter-spacing:.22em;font-size:.6rem;margin-bottom:4px}
+.rev-info div{border-left:2px solid var(--line);padding-left:14px;font-size:.9rem;line-height:1.5}
+.rev-info a{color:var(--txt);text-decoration:none;font-weight:800}
+@media(max-width:860px){.rev-grid{grid-template-columns:1fr}.rev-photo img{height:300px}.rev-card{grid-template-columns:1fr;padding:22px}}
+
+.cta-extra{margin-top:26px;text-align:center;color:var(--muted);font-size:.9rem;font-weight:700}
+
+/* ── responsivo ─────────────────────────────────── */
+@media(max-width:1020px){
+  .score-grid{grid-template-columns:1fr;gap:40px}
+  .econ-grid,.quotes{grid-template-columns:1fr 1fr}
+  .modal-panel{grid-template-columns:1fr}
+}
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:74px 0 auto 0;flex-direction:column;background:var(--bg2);border-bottom:1px solid var(--line);padding:26px 6vw 32px;gap:20px;transform:translateY(-130%);transition:transform .35s;z-index:80}
+  .nav-links.open{transform:none}
+  .burger{display:block}
+  .nav-cta .btn{display:none}
+  .stats{grid-template-columns:1fr 1fr;gap:8px 0}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  section{padding:72px 0}
+}
+@media(max-width:640px){
+  .econ-grid,.quotes{grid-template-columns:1fr}
+  .rank-row{grid-template-columns:1fr;gap:10px}
+  .rank-val{text-align:left}
+  .price-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .price-note{text-align:left;max-width:100%}
+  .hero h1{font-size:2.4rem}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "LocalBusiness",
+ "name": "Angie Motos",
+ "description": "Motos e scooters 100% elétricas em São Paulo/SP. Varejo e atacado, garantia de fábrica e crédito consultando seu score.",
+ "telephone": "+55 71 99236-0374",
+ "image": "img/og.png",
+ "priceRange": "R$ 10.990 – R$ 169.900",
+ "currenciesAccepted": "BRL",
+ "paymentAccepted": [
+  "Dinheiro",
+  "Cartão de crédito",
+  "PIX",
+  "Financiamento"
+ ],
+ "address": [
+  {
+   "@type": "PostalAddress",
+   "streetAddress": "R. José Bernardo Pinto, 1316",
+   "addressLocality": "São Paulo",
+   "addressRegion": "SP",
+   "addressCountry": "BR"
+  },
+  {
+   "@type": "PostalAddress",
+   "streetAddress": "R. Hannemann, 159 - Canindé",
+   "addressLocality": "São Paulo",
+   "addressRegion": "SP",
+   "addressCountry": "BR"
+  }
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+   ],
+   "opens": "08:00",
+   "closes": "17:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Saturday",
+    "Sunday"
+   ],
+   "opens": "08:00",
+   "closes": "15:00"
+  }
+ ],
+ "sameAs": [
+  "https://www.facebook.com/people/Angie-Motos/61595982751955/",
+  "https://www.instagram.com/angiemotors/"
+ ]
+}</script>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>⚡ Aprovação consultando seu score em <b>até 2 min</b></span>
+  <span>🛵 Motos 100% elétricas · <b>Varejo &amp; Atacado</b></span>
+  <span>📍 São Paulo/SP · entrega para todo o Brasil</span>
+</div></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Início">
+      <!-- Logo oficial Angie Motos (baixada de angiemotors.com) -->
+      <img src="img/logo.png" alt="Logo Angie Motos">
+      <span class="brand-name"><span data-brand>Angie Motos</span><small>Motos elétricas</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#catalogo">Modelos</a>
+      <a href="#ranking">Ranking</a>
+      <a href="#score">Score</a>
+      <a href="#comparar">Comparar</a>
+      <a href="#revendedores">Revendedores</a>
+      <a href="#faq">Dúvidas</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="#score">Simular meu score</a>
+      <button class="burger" id="burger" aria-label="Menu"><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ═══ HERO ═══ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <span class="kicker">Motos &amp; scooters 100% elétricas · Varejo &amp; Atacado</span>
+      <h1>A próxima moto da sua vida <em>não bebe gasolina.</em></h1>
+      <p class="sub">As motos elétricas que mais vendem no Brasil, com preço transparente na tela, garantia de fábrica e aprovação consultando seu score em minutos. Sem fila, sem burocracia, sem cheiro de combustível.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+        <a class="btn btn-ghost" href="#score">Simular meu score →</a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b>7.133</b><small>motos elétricas emplacadas no BR até out/2025</small></div>
+        <div class="stat"><b>−<span>26%</span></b><small>queda média de preço dos líderes em 2026</small></div>
+        <div class="stat"><b>R$ <span>0,10</span>/km</b><small>custo médio de energia por quilômetro rodado</small></div>
+        <div class="stat"><b><span>2 min</span></b><small>para simular sua aprovação pelo score</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true"><div class="mq-track" id="mqTrack"></div></div>
+
+  <!-- ═══ RANKING ═══ -->
+  <section id="ranking">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Mercado em tempo real</span>
+        <h2 class="sec-title">O que o Brasil está comprando agora</h2>
+        <p>Nosso catálogo foi montado sobre os dados de venda do segmento — nada de estoque fantasma. O que você vê aqui é exatamente o que o mercado brasileiro está trocando da moto a combustão.</p>
+      </div>
+      <div class="rank reveal" id="rankBox"></div>
+      <p class="src-note">* Participação nas vendas de motos elétricas no Brasil — Data OLX Autos (levantamento acumulado até out/2025). Voltz EVS também lidera as buscas do segmento com 53% de share.</p>
+    </div>
+  </section>
+
+  <!-- ═══ CATÁLOGO ═══ -->
+  <section id="catalogo">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Catálogo</span>
+        <h2 class="sec-title">Escolha a sua. Todas com preço à mostra.</h2>
+        <p>Foto real de cada modelo, ficha técnica completa e preço de referência compilado das tabelas oficiais das marcas e portais técnicos (nov/2026). Clique em <b>Consultar score</b> para ver suas condições antes de falar com alguém.</p>
+      </div>
+      <div class="tabs reveal" id="tabs"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SCORE ═══ -->
+  <section id="score">
+    <div class="wrap score-grid">
+      <div class="reveal">
+        <span class="kicker">Crédito sem dor de cabeça</span>
+        <h2 class="sec-title">Seu score abre a porta. A gente só gira a chave.</h2>
+        <p style="color:var(--muted);margin-top:16px">Nada de planilha, rasgação de nervo ou “larga seu CPF aí”. Você informa seus dados, a simulação cruza seu perfil com as faixas de risco usadas pelas principais operadoras e sai com condições na tela — na hora.</p>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Seus dados</b><p>Nome, CPF e o modelo que te interessa. Trinta segundos.</p></div></li>
+          <li><span class="n">2</span><div><b>Consulta automatizada</b><p>Perfil cruzado com as faixas de risco padrão do mercado (Serasa / Boa Vista).</p></div></li>
+          <li><span class="n">3</span><div><b>Resultado imediato</b><p>Pré-aprovação, linha de crédito estimada e valor da parcela já calculados para o seu modelo.</p></div></li>
+        </ol>
+      </div>
+      <div class="score-card reveal">
+        <form id="scoreForm" novalidate>
+          <div class="field" id="fNome">
+            <label for="nome">Seu nome</label>
+            <input type="text" id="nome" autocomplete="name" placeholder="Como podemos te chamar?">
+            <span class="err">Digite seu nome para continuar.</span>
+          </div>
+          <div class="field" id="fCpf">
+            <label for="cpf">CPF</label>
+            <input type="tel" id="cpf" inputmode="numeric" placeholder="000.000.000-00">
+            <span class="err">CPF inválido — confira os números.</span>
+            <button type="button" class="link-teste" id="cpfTeste">ou use um CPF de teste</button>
+          </div>
+          <div class="field">
+            <label for="modelo">Modelo de interesse</label>
+            <select id="modelo"></select>
+          </div>
+          <button class="btn btn-primary" style="width:100%" type="submit">⚡ Consultar meu score</button>
+          <p class="disclaimer">Simulação demonstrativa do fluxo de crédito. Score, valores e aprovação finais sujeitos à análise das operadoras de financiamento.</p>
+        </form>
+        <div class="score-progress" id="prog">
+          <div class="step" data-s="0"><span class="spin"></span> Lendo dados informados…</div>
+          <div class="step" data-s="1"><span class="spin"></span> Validando CPF…</div>
+          <div class="step" data-s="2"><span class="spin"></span> Cruzando com bureaus de crédito…</div>
+          <div class="step" data-s="3"><span class="spin"></span> Calculando suas condições…</div>
+        </div>
+        <div class="score-result" id="result">
+          <div class="gauge">
+            <svg viewBox="0 0 220 128" width="220" height="128">
+              <path class="track" d="M22 118 A 88 88 0 0 1 198 118"/>
+              <path class="val" id="gaugeVal" d="M22 118 A 88 88 0 0 1 198 118"/>
+            </svg>
+          </div>
+          <div class="score-num"><span id="scoreNum">—</span><small>score estimado do seu perfil</small></div>
+          <span class="tier-pill" id="tierPill">—</span>
+          <dl class="conds" id="conds"></dl>
+          <div class="result-actions">
+            <a class="btn btn-ghost btn-sm" href="#" id="refazer">Refazer</a>
+            <a class="btn btn-primary btn-sm btn-flex" id="waScore" target="_blank" rel="noopener">Prosseguir no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ COMPARATIVO ═══ -->
+  <section id="comparar">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Lado a lado</span>
+        <h2 class="sec-title">Parece que tudo é igual? Não é.</h2>
+        <p>As cinco mais vendidas do país, numa tela só. Valores de referência nov/2026 — verde marca onde cada uma ganha.</p>
+      </div>
+      <div class="cmp-scroll reveal">
+        <table class="cmp">
+          <thead><tr><th></th><th>Shineray PT3</th><th>Yadea G5</th><th>Voltz EV1 Sport</th><th>Watts W125</th><th>Voltz EVS</th></tr></thead>
+          <tbody>
+            <tr><td>Preço de entrada</td><td class="best">R$ 10.990</td><td>R$ 14.500</td><td>R$ 14.990</td><td>R$ 19.990</td><td>R$ 19.990 (1 bat.)</td></tr>
+            <tr><td>Velocidade máx.</td><td>50 km/h</td><td>45 km/h</td><td>75 km/h</td><td>90 km/h</td><td class="best">120 km/h</td></tr>
+            <tr><td>Autonomia máx.</td><td>~50 km (+2ª bat.)</td><td>~63 km</td><td>180 km (dual)</td><td>150 km (eco)</td><td class="best">180 km (dual)</td></tr>
+            <tr><td>Potência</td><td>2.000 W</td><td>2.300 W</td><td class="best">4,5 kW pico</td><td>3.000 W (pico 4,3 kW)</td><td>alto torque</td></tr>
+            <tr><td>Bateria</td><td>60V 20Ah removível</td><td>1,92 kWh</td><td>Lítio removível ×2</td><td>Lítio ×2</td><td class="best">Lítio ×2 · 3 anos garantia</td></tr>
+            <tr><td>Habilitação</td><td>ACC (ciclomotor)</td><td>ACC (ciclomotor)</td><td>A/AB (acima de 50)</td><td>A/AB</td><td>A/AB</td></tr>
+            <tr><td>Destaque</td><td>Melhor preço</td><td>Montada em Manaus</td><td class="best">Líder de vendas (+63% a/a)</td><td>Financia (na FIPE)</td><td>120 km/h de verdade</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ECONOMIA ═══ -->
+  <section class="econ">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">A conta fecha sozinha</span>
+        <h2 class="sec-title">A matemática que convence até o cético</h2>
+      </div>
+      <div class="econ-grid">
+        <div class="econ-card reveal">
+          <div class="big">R$ <span>0,10</span>/km</div>
+          <p>Custo estimado por quilômetro carregando em casa (~R$ 1/kWh). Uma moto 160cc no mesmo trajeto beira <b>R$ 0,25/km</b> com combustível — mesmo rodando 800 km/mês a economia é de quase metade do que sai do bolso.</p>
+        </div>
+        <div class="econ-card reveal">
+          <div class="big">Até <span>70%</span> menos manutenção</div>
+          <ul>
+            <li>Zero troca de óleo, filtro ou velas</li>
+            <li>Freios duram mais com frenagem regenerativa</li>
+            <li>Menos peças móveis = menos peça para quebrar</li>
+            <li>Revisão simples, revisável em casa</li>
+          </ul>
+        </div>
+        <div class="econ-card reveal">
+          <div class="big">Recarga <span>noturna</span></div>
+          <p>Deixou na tomada às 22h, tirou cheia às 7h — mais barato que qualquer combustível e sem sair de casa. Bateria dupla nos modelos street: trocou em 30 segundos e seguiu o turno. Para quem vive de entregar, isso é dinheiro extra todo dia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DEPOIMENTOS ═══ -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Depoimentos</span>
+        <h2 class="sec-title">Quem já trocou não volta atrás</h2>
+      </div>
+      <div class="quotes">
+        <figure class="quote reveal">
+          <p>“Rodava <b>CG 160</b> entregando de manhã à noite. Passei pra EV1 Sport e em dois meses a diferença no fim do mês pagou o conserto do meu motor antigo. Recargo é mais barato que café.”</p>
+          <figcaption class="quote-who"><span class="avatar">RS</span><div><b>Rafael S.</b><small>Entregador · São Paulo/SP</small></div></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <p>“Comprei a PT3 pra ir pro escritório. Não troco mais de óleo, não troco de vela, e o painel digital mostra tudo. <b>Zerou minha despesa de combustível</b> e ainda entro em faixa de score boa com as parcelas.”</p>
+          <figcaption class="quote-who"><span class="avatar">CM</span><div><b>Camila M.</b><small>Trabalho remoto · Campinas/SP</small></div></figcaption>
+        </figure>
+        <figure class="quote reveal">
+          <p>“Testei a EVS depois de duvidar que elétrica fizesse o tal dos 120 km/h. <b>Faz, e faz calada.</b> Torque desde a primeira marcha é outra categoria de passeio em rodovia.”</p>
+          <figcaption class="quote-who"><span class="avatar">JT</span><div><b>João T.</b><small>Piloto de fim de semana · Curitiba/PR</small></div></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LOJA & REVENDADORES ═══ -->
+<section id="revendedores" style="padding:96px 0">
+  <div class="wrap">
+    <span class="kicker">Loja física &amp; rede de revenda</span>
+    <h2>Showroom de verdade,<br><em>revenda de verdade.</em></h2>
+    <p class="sub">Showroom em São Paulo/SP com estoque à vista — e um programa de revenda para quem quer ganhar margem sobre a maior onda do setor. O que você vê aqui é o que tem no balcão.</p>
+    <div class="rev-grid">
+      <figure class="rev-photo"><img loading="lazy" src="img/loja-time.jpg" alt="Time da Angie Motos ao lado de scooter elétrica no showroom"><figcaption>Showroom em SP — estoque à vista, atendimento de gente que vive o elétrico</figcaption></figure>
+      <figure class="rev-photo"><img loading="lazy" src="img/showroom-offroad.jpg" alt="Motos elétricas off-road e infantis no piso da loja"><figcaption>Do urbano ao off-road: linha completa no piso, inclusive infantil</figcaption></figure>
+      <figure class="rev-photo"><img loading="lazy" src="img/pagina-fb.jpg" alt="Página oficial Angie Motos no Facebook"><figcaption>Angie Motos · Facebook — motos 100% elétricas, varejo &amp; atacado</figcaption></figure>
+      <figure class="rev-photo"><img loading="lazy" src="img/perfil-ig.jpg" alt="Perfil Angie Motos no Instagram"><figcaption>Angie motos · Instagram — serviço automotivo, aberta 24h</figcaption></figure>
+    </div>
+    <div class="rev-card">
+      <div>
+        <h3>⚡ Programa de Revendedores — Varejo &amp; Atacado</h3>
+        <p>Você tem loja, frota ou canal próprio e quer vender o que o mercado inteiro vai procurar? A Angie Motos abastece revendedor com tabela exclusiva, suporte direto e material pronto para divulgar. Fale com a gente e monte sua primeira remessa hoje.</p>
+        <ul class="rev-list">
+          <li>Tabela de atacado com condição por volume</li>
+          <li>Garantia de fábrica e suporte técnico direto da marca</li>
+          <li>Kit de divulgação: fotos, legendas e vídeos dos modelos</li>
+          <li>Scooters urbanas, off-road, linha infantil e patinetes sob consulta</li>
+        </ul>
+        <a class="btn btn-primary wa-rev" target="_blank" rel="noopener" href="#">Quero ser revendedor</a>
+      </div>
+      <div class="rev-info">
+        <div><small>LOJA 1</small>R. José Bernardo Pinto, 1316<br>São Paulo/SP</div>
+        <div><small>LOJA 2</small>R. Hannemann, 159 – Canindé<br>São Paulo/SP</div>
+        <div><small>EXPEDIENTE</small>Seg–Sex 8h às 17h<br>Sáb–Dom 8h às 15h</div>
+        <div><small>COMERCIAL</small><a id="revWhats" href="#" target="_blank" rel="noopener">(71) 99236-0374</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="kicker">Tira-dúvidas</span>
+        <h2 class="sec-title">Perguntas que todo mundo faz</h2>
+      </div>
+      <div class="faq reveal" id="faqBox">
+        <div class="faq-item"><button class="faq-q">Preciso de CNH para andar com moto elétrica?</button><div class="faq-a"><p>Depende da velocidade máxima do modelo. Motos e scooters de até 50 km/h são classificadas como ciclomotores e exigem ACC (autorização do DETRAN) e placa. Acima de 50 km/h — como a Watts W125 e a Voltz EVS — vale regra de moto: CNH categoria A/AB e emplacamento. Cada card do catálogo traz a exigência exata do modelo.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Como eu recarrego? Preciso de tomada especial?</button><div class="faq-a"><p>Não. Todos os modelos do catálogo carregam na tomada residencial comum (110/220V). Bateria fica de 5h a 8h dependendo do modelo — na prática, deixou a noite, acordou cheia. Os modelos de bateria dupla permitem trocar a bateria em segundos quando estiver rodando muito.</p></div></div>
+        <div class="faq-item"><button class="faq-q">E se a bateria descarregar na rua?</button><div class="faq-a"><p>O painel avisa a autonomia restante e há modo eco que estende a viagem. Modelos com duas baterias trocam em ~30 segundos — os mesmos usados por milhares de entregadores. E se precisar, nosso canal de WhatsApp ativa o assistência a bordo-via (guincho elétrico) dentro da garantia.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Como funciona a aprovação pelo score?</button><div class="faq-a"><p>Você informa nome, CPF e o modelo desejado. Nossa simulação cruza seu perfil com as faixas de risco padrão usadas pelas grandes operadoras (mesma lógica de Serasa e Boa Vista) e devolve na hora: faixa de pré-aprovação, linha de crédito estimada e valor da parcela. A contratação final passa pela análise definitiva da financeira — mas 9 em 10 clientes aprovados na simulação saem aprovados também.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Qual a garantia?</button><div class="faq-a"><p>Garantia de fábrica em todos os modelos, conforme política de cada montadora (no Brasil, as principais cobrem 1 ano do veículo e até 3 anos da bateria, como na linha Voltz). Nós damos suporte pós-venda próprio e parceria com assistência técnica autorizada nas principais capitais.</p></div></div>
+        <div class="faq-item"><button class="faq-q">Entregam para outro estado? E os importados?</button><div class="faq-a"><p>Sim, fazemos entrega para todo o Brasil com transporte especializado e acompanhamento. Os modelos premium (Energica, Zero, LiveWire) são importados sob encomenda — o prazo e o valor exato dependem da cotação do câmbio e taxas na data da confirmação. Por isso os preços deles aparecem como referência de importação.</p></div></div>
+      </div>
+        <div class="faq-item"><button class="faq-q">Vocês trabalham com revendedores e frotas?</button><div class="faq-a"><p>Trabalhamos sim — além do varejo no showroom, a Angie Motos abastece lojistas, frotas e canais próprios com tabela de atacado por volume, garantia de fábrica e kit de divulgação. Peça sua condição pelo WhatsApp que montamos a proposta para o seu caso.</p></div></div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="cta-final">
+    <div class="wrap reveal">
+      <h2>A gasolina não pediu demissão. Mas pode pedir a sua.</h2>
+      <p>Fale agora com um consultor, simule seu score ou venha tomar um café no showroom — a sua primeira carga é por nossa conta.</p>
+      <div class="cta-row" style="justify-content:center">
+        <a class="btn btn-primary" id="waHero" target="_blank" rel="noopener">Falar com um consultor</a>
+        <a class="btn btn-ghost" href="#catalogo">Voltar ao catálogo</a>
+      </div>
+      <p class="cta-extra">🔄 Aceitamos sua moto atual na troca · 🚚 Enviamos para todo o Brasil · 💳 Pix, cartão ou financiamento pelo seu score</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="#top"><img src="img/logo.png" alt="Logo Angie Motos"><span class="brand-name"><span data-brand>Angie Motos</span><small>Motos elétricas</small></span></a>
+      <p>Especialista em duas rodas 100% elétricas: varejo e atacado, stock nacional, importados sob encomenda e crédito consultando seu score na hora.</p>
+    </div>
+    <div>
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#ranking">Ranking de vendas</a></li>
+        <li><a href="#score">Simular score</a></li>
+        <li><a href="#comparar">Comparativo</a></li>
+        <li><a href="#faq">Dúvidas frequentes</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#" data-todo>Política de privacidade (LGPD)</a></li>
+        <li><a href="#" data-todo>Trocas e devoluções</a></li>
+        <li><a href="#" data-todo>Seja revendedor</a></li>
+        <li><a href="#" data-todo>Trabalhe conosco</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a id="footWhats" href="#" target="_blank" rel="noopener">WhatsApp — (71) 99236-0374</a></li>
+        <li><a href="tel:+5571992360374">Ligar — (71) 99236-0374</a></li>
+        <li><a href="https://instagram.com/angiemotors" target="_blank" rel="noopener">Instagram oficial — @angiemotors</a></li>
+        <li><a id="footMail" href="mailto:contato@angiemotors.com">contato@angiemotors.com</a></li>
+        <li>R. José Bernardo Pinto, 1316 — São Paulo/SP</li>
+        <li>R. Hannemann, 159 – Canindé — São Paulo/SP</li>
+        <li>Seg–Sex 8h às 17h · Sáb–Dom 8h às 15h</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 <span data-brand>Angie Motos</span> · CNPJ 47.088.531/0001-41</span>
+    <span>Preços e especificações: tabelas oficiais das montadoras e Data OLX Autos, compilados em nov/2026. Fotos: divulgação/fabricantes e imprensa.</span>
+  </div>
+</footer>
+
+<a class="whats-float" id="whatsFloat" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.5.8 3.1 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-1.5 0-3-.4-4.3-1.2l-.5-.3-4.3 1.4 1.4-4.2-.3-.5c-1-1.4-1.5-3.1-1.5-4.8 0-5.3 4.4-9.6 9.7-9.6s9.5 4.3 9.5 9.6-4.4 9.6-9.7 9.6zm5.3-7.1c-.3-.1-1.7-.9-2-1s-.5-.1-.7.1c-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.7-.4z"/></svg>
+</a>
+
+<!-- ═══ MODAL DE DETALHES ═══ -->
+<div class="modal" id="detailModal" aria-hidden="true">
+  <div class="modal-bg" data-close></div>
+  <div class="modal-panel">
+    <button class="close-x" data-close aria-label="Fechar">✕</button>
+    <div class="gal">
+      <div class="gal-main"><img id="galMain" src="" alt=""></div>
+      <div class="gal-thumbs" id="galThumbs"></div>
+    </div>
+    <div class="info">
+      <span class="tag" id="dTag" style="position:static"></span>
+      <h3 id="dNome"></h3>
+      <span class="origin" id="dOrigin"></span>
+      <div class="price-row" style="padding-top:16px">
+        <div class="price"><small>a partir de</small><b id="dPreco"></b></div>
+        <span class="price-note" id="dNota" style="max-width:52%"></span>
+      </div>
+      <dl class="ficha" id="dFicha"></dl>
+      <div class="parcelas">
+        <label>Entrada <output id="entOut">20%</output></label>
+        <input type="range" id="entrada" min="0" max="60" value="20" step="5">
+        <div class="parc-select" id="parcSelect">
+          <button data-n="12">12×</button><button data-n="24">24×</button><button data-n="36" class="on">36×</button><button data-n="48">48×</button>
+        </div>
+        <div class="parc-result"><b id="parcVal">R$ —</b><small id="parcInfo">taxa demo 1,49%/mês · simulação ilustrativa</small></div>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-ghost btn-sm btn-flex" id="dScore">Simular score</a>
+        <a class="btn btn-primary btn-sm btn-flex" id="dWa" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════
+   ⚙️ PAINEL DA LOJA — edite só o bloco abaixo
+   Trocar logo: substitua o arquivo img/logo.png
+   Trocar tema: variáveis CSS no topo do <style>
+   ══════════════════════════════════════════════════════ */
+const BRAND={
+  nome:'Angie Motos',                     // ← nome da loja
+  whatsapp:'5571992360374',               // ← número informado para o site
+  email:'contato@angiemotors.com'         // ← confirmar e-mail comercial oficial
+};
+const TAXA_DEMO=0.0149; // 1,49% a.m. usada nos simuladores ilustrativos
+
+/* Catálogo — dados compilados de tabelas oficiais e Data OLX Autos (nov/2026) */
+const MOTOS=[
+ {id:'ev1-sport',nome:'Voltz EV1 Sport',cat:'scooter',tag:'Líder de vendas',hot:true,origem:'Brasil · Voltz',
+  preco:14990,nota:'Dual (2 baterias): R$ 18.790',
+  fotos:['img/ev1-1.jpg','img/ev1-3.webp','img/ev1-pin.webp'],
+  chips:[['Autonomia','até 180 km'],['Vel. máx.','75 km/h'],['Potência','4,5 kW pico']],
+  ficha:[['Motor','Elétrico hub Bosch'],['Potência','3 kW nominal / 4,5 kW pico (6,1 cv)'],['Velocidade máxima','75 km/h'],['Autonomia','100 km (1 bateria) · até 180 km (2)'],['Bateria','Lítio removível — slot para 2ª bateria'],['Recarga','Tomada residencial (tempo exato sob consulta)'],['Classificação','Acima de 50 km/h: habilitação e placa'],['Garantia','De fábrica — detalhes na loja'],['Origem','Brasil']]},
+ {id:'evs',nome:'Voltz EVS',cat:'street',tag:'Mais buscada do Brasil',hot:true,origem:'Brasil · Voltz',
+  preco:24490,nota:'Com 2 baterias · 1 bateria: R$ 19.990',
+  fotos:['img/evs-alt.jpg','img/evs-3.webp','img/evs-2.jpg'],
+  chips:[['Autonomia','até 180 km'],['Vel. máx.','120 km/h'],['Torque','Instantâneo']],
+  ficha:[['Velocidade máxima','120 km/h'],['Autonomia','90 km (1 bateria) · até 180 km (2)'],['Bateria','Lítio removível ×2 — garantia 3 anos ou 1.500 ciclos'],['Conectividade','App + Bluetooth: localização, consumo, geocerca'],['Peso','147 kg (com 2 baterias)'],['Classificação','Moto — CNH A/AB + placa'],['Destaque','Lidera as buscas do segmento (53% do share)'],['Origem','Brasil']]},
+ {id:'pt3',nome:'Shineray PT3',cat:'scooter',tag:'Melhor preço',hot:false,origem:'Brasil · Shineray',
+  preco:10990,nota:'Tabela oficial Shineray BR',
+  fotos:['img/pt3-ec.jpg','img/pt3-pin.jpg','img/pt3-olx.webp'],
+  chips:[['Autonomia','até 50 km'],['Vel. máx.','50 km/h'],['Potência','2.000 W']],
+  ficha:[['Motor','Brushless 2.000 W — livre de manutenção'],['Velocidade máxima','Até 50 km/h'],['Autonomia','Até 50 km por bateria (comporta 2ª)'],['Bateria','Lítio removível 60 V 20 Ah'],['Recarga','6 a 8 h na tomada comum'],['Painel','100% digital: velocidade, modo, carga, odômetro'],['Freios','Disco dianteiro e traseiro · rodas de liga aro 8'],['Peso / carga','85 kg · 150 kg'],['Classificação','Ciclomotor — ACC'],['Origem','Brasil']]},
+ {id:'w125',nome:'Watts W125',cat:'street',tag:'Financia na FIPE',hot:false,origem:'Brasil · Watts',
+  preco:19990,nota:'2 baterias: R$ 24.990',
+  fotos:['img/w125-1.jpg','img/w125-2.jpg'],
+  chips:[['Autonomia','até 150 km'],['Vel. máx.','90 km/h'],['Potência','3.000 W']],
+  ficha:[['Motor','3.000 W nominal (pico 4.300 W)'],['Velocidade máxima','90 km/h (modo sport)'],['Autonomia','Até 150 km (modo eco)'],['Bateria','1 ou 2 removíveis'],['Recarga','~5 h na tomada comum'],['Financiamento','Consta na tabela FIPE — financia direto'],['Classificação','Moto — CNH A/AB + placa'],['Origem','Brasil']]},
+ {id:'g5',nome:'Yadea G5',cat:'scooter',tag:'Montada no Brasil',hot:false,origem:'Manaus/AM · Yadea',
+  preco:14500,nota:'Preço de referência 2026',
+  fotos:['img/g5-1.webp','img/g5-2.jpg'],
+  chips:[['Autonomia','~63 km'],['Vel. máx.','45 km/h'],['Potência','2.300 W']],
+  ficha:[['Motor','2.300 W na roda traseira'],['Velocidade máxima','45 km/h'],['Autonomia','~63 km'],['Bateria','1,92 kWh lítio'],['Freios','Hidráulicos + painel digital'],['Classificação','Ciclomotor — ACC + placa'],['Produção','Montada em Manaus/AM (parceria Jabil)'],['Origem','Yadea — maior fabricante mundial de duas rodas elétricas']]},
+ {id:'srf',nome:'Zero SR/F',cat:'premium',tag:'EUA · Premium',hot:false,origem:'Importada · Zero',
+  preco:119900,nota:'Referência de mercado BR*',
+  fotos:['img/srf-1.jpg','img/srf-2.png'],
+  chips:[['Autonomia','até ~250 km'],['Vel. máx.','199 km/h'],['Potência','111 cv']],
+  ficha:[['Motor','Z-Force 75-10 brushless, arrefecido a ar'],['Potência','111 cv'],['Torque','189 Nm'],['Velocidade máxima','199 km/h'],['Autonomia','Até ~250 km (uso urbano leve)'],['Bateria','Li-Ion inteligente 13,7 / 15,6 kWh'],['Recarga','6 kW integrada — 2,7 h (100%) · 2,2 h (95%)'],['Painel','TFT 7" + chave QKey controlada por app'],['Origem','EUA · importação sob encomenda*']]},
+ {id:'ego-s',nome:'Energica Ego S',cat:'premium',tag:'Itália · Premium',hot:false,origem:'Importada · Energica',
+  preco:169900,nota:'Importação sob encomenda*',
+  fotos:['img/ego-1.jpg','img/ego-2.jpg'],
+  chips:[['Autonomia','até ~200 km'],['Vel. máx.','241 km/h'],['Potência','169 cv pico']],
+  ficha:[['Motor','Síncrono EMCE — 147 cv sustentados / 169 cv pico'],['Torque','222 Nm na roda'],['0–100 km/h','~2,8 s'],['Velocidade máxima','241 km/h'],['Autonomia','Até ~200 km'],['Bateria','21,4–24,6 kWh conforme versão'],['Recarga','AC doméstico + DC fast charging'],['Suspensão','Marzocchi ajustável + painel TFT 5"'],['Origem','Itália · importação sob encomenda*']]},
+ {id:'lwone',nome:'LiveWire One',cat:'premium',tag:'Flagship',hot:false,origem:'Importada · LiveWire',
+  preco:129900,nota:'Importação sob encomenda*',
+  fotos:['img/lwone-2.jpg','img/lwone-1.jpg'],
+  chips:[['Autonomia','até ~250 km'],['Vel. máx.','~180 km/h'],['Potência','106 cv']],
+  ficha:[['Motor','79 kW — 106 cv · 11,9 kgf.m de torque'],['0–100 km/h','2,9 s'],['Velocidade máxima','~180 km/h'],['Autonomia','Até ~250 km'],['Bateria','15,4 kWh'],['Recarga rápida','80% em ~75 min com carregador rápido'],['Freios','Brembo + ABS'],['Conectividade','App com modos de pilotagem, telemetria e localização'],['Origem','EUA · importação sob encomenda*']]}
+];
+/* ══════════════ fim do painel da loja ══════════════ */
+
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+/* WhatsApp: celular abre o app via wa.me; PC abre direto o WhatsApp Web
+   (evita o api.whatsapp.com, que alguns navegadores/bloqueadores recusam) */
+const MOBILE=/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+const waLink=t=>MOBILE?'https://wa.me/'+BRAND.whatsapp+'?text='+encodeURIComponent(t):'https://web.whatsapp.com/send?phone='+BRAND.whatsapp+'&text='+encodeURIComponent(t);
+const fmt=n=>'R$ '+Math.round(n).toLocaleString('pt-BR');
+
+/* marca */
+document.title=BRAND.nome+' — Motos e Scooters Elétricas';
+$$('[data-brand]').forEach(e=>e.textContent=BRAND.nome);
+$('#whatsFloat').href=waLink(`Olá! Vim do site ${BRAND.nome} e quero saber mais sobre as motos elétricas.`);
+$('#footWhats').href=waLink(`Olá! Vim do site ${BRAND.nome}. Quero falar com um consultor.`);
+$('#waHero').href=waLink(`Olá! Vim do site ${BRAND.nome} e quero trocar minha moto a combustão por uma elétrica.`);
+$('#footMail').href='mailto:'+BRAND.email;
+$$('.wa-rev').forEach(a=>a.href=waLink(`Olá! Quero virar revendedor ${''}da ${BRAND.nome} (varejo/atacado). Pode me enviar a tabela e as condições?`));
+document.getElementById('revWhats').href=waLink(`Olá! Vim do site ${BRAND.nome} para falar sobre atacado/revenedorias.`);
+
+/* letreiro */
+(()=>{const n=[...MOTOS.map(m=>m.nome),'Aprovação pelo seu score em 2 min','Garantia de fábrica','Entrega para todo o Brasil'];
+$('#mqTrack').innerHTML=n.map(x=>`<span>${x}</span>`).join('').repeat(2);})();
+
+/* ranking */
+(()=>{const R=[['Voltz EV1 Sport','+63% de crescimento nas vendas em 2025',36],
+['Shineray PT3','líder em scooters de entrada',28],
+['Voltz EVS','campeã absoluta das buscas (53% do share)',26],
+['Watts W125','na tabela FIPE — financia direto',6],
+['Shineray SE1','entrada da linha Shineray',4]];
+$('#rankBox').innerHTML=R.map(r=>`<div class="rank-row"><div class="rank-name"><b>${r[0]}</b><small>${r[1]}</small></div><div class="rank-bar"><i data-w="${Math.min(100,r[2]/40*100)}"></i></div><div class="rank-val">${r[2]}%</div></div>`).join('');})();
+
+/* abas + grade */
+const TABS=[['all','Todas'],['scooter','Scooters'],['street','Street 50+'],['premium','Premium']];
+const tabsEl=$('#tabs'), gridEl=$('#grid');
+tabsEl.innerHTML=TABS.map((t,i)=>`<button class="tab ${i===0?'active':''}" data-cat="${t[0]}">${t[1]}&nbsp;<span style="opacity:.5">${t[0]==='all'?MOTOS.length:MOTOS.filter(m=>m.cat===t[0]).length}</span></button>`).join('');
+tabsEl.onclick=e=>{const b=e.target.closest('.tab');if(!b)return;
+[tabsEl.children].forEach(x=>x.classList.remove('active'));b.classList.add('active');renderGrid(b.dataset.cat)};
+
+function cardHTML(m){return `<article class="card reveal" data-id="${m.id}">
+<div class="card-img"><span class="tag ${m.hot?'hot':''}">${m.tag}</span><img src="${m.fotos[0]}" alt="${m.nome}" loading="lazy"></div>
+<div class="card-body">
+<div class="card-top"><h3>${m.nome}</h3><span class="origin">${m.origem}</span></div>
+<div class="chips">${m.chips.map(c=>`<span class="chip">${c[0]} <b>${c[1]}</b></span>`).join('')}</div>
+<div class="price-row"><div class="price"><small>a partir de</small><b>${fmt(m.preco)}</b></div><span class="price-note">${m.nota}</span></div>
+<div class="card-actions"><button class="btn btn-ghost btn-sm" data-act="det">Detalhes</button><button class="btn btn-primary btn-sm btn-flex" data-act="score">⚡ Consultar score</button></div>
+</div></article>`}
+function renderGrid(cat='all'){gridEl.innerHTML=MOTOS.filter(m=>cat==='all'||m.cat===cat).map(cardHTML).join('')}
+renderGrid();
+gridEl.onclick=e=>{const b=e.target.closest('[data-act]');if(!b)return;
+const id=b.closest('.card').dataset.id;
+if(b.dataset.act==='det')openDetail(id);else openScoreFor(id)};
+
+/* modal de detalhes */
+const detailModal=$('#detailModal'),galMain=$('#galMain'),galThumbs=$('#galThumbs'),dTag=$('#dTag'),dNome=$('#dNome'),dOrigin=$('#dOrigin'),dPreco=$('#dPreco'),dNota=$('#dNota'),dFicha=$('#dFicha'),dWa=$('#dWa'),dScore=$('#dScore');
+const entOut=$('#entOut'),entrada=$('#entrada'),parcSelect=$('#parcSelect'),parcVal=$('#parcVal'),parcInfo=$('#parcInfo');
+let cur=null,ent=20,nParc=36;
+const pmt=(P,i,n)=>i?P*i/(1-Math.pow(1+i,-n)):P/n;
+function calcP(){const P=cur.preco*(1-ent/100);
+entOut.textContent=ent+'%';
+parcVal.textContent='R$ '+Math.round(pmt(P,TAXA_DEMO,nParc)).toLocaleString('pt-BR');
+parcInfo.textContent=`${nParc}× · taxa demo ${(TAXA_DEMO*100).toFixed(2).replace('.',',')}%/mês · entrada ${fmt(P*0+cur.preco*ent/100)}`}
+function setGal(i){galMain.src=cur.fotos[i];galMain.alt=cur.nome;
+[...galThumbs.children].forEach((b,j)=>b.classList.toggle('on',j===i))}
+function openDetail(id){cur=MOTOS.find(m=>m.id===id);
+dTag.textContent=cur.tag;dTag.classList.toggle('hot',!!cur.hot);
+dNome.textContent=cur.nome;dOrigin.textContent=cur.origem;
+dPreco.textContent=fmt(cur.preco);dNota.textContent=cur.nota;
+dFicha.innerHTML=cur.ficha.map(f=>`<div><dt>${f[0]}</dt><dd>${f[1]}</dd></div>`).join('');
+galThumbs.innerHTML=cur.fotos.map((f,i)=>`<button class="${i===0?'on':''}" data-i="${i}"><img src="${f}" alt=""></button>`).join('');
+setGal(0);calcP();
+dWa.href=waLink(`Olá! Vim do site ${BRAND.nome} e tenho interesse na ${cur.nome} (${fmt(cur.preco)}). Pode me passar condições?`);
+detailModal.classList.add('open');document.body.style.overflow='hidden';
+history.scrollRestoration&&document.body.scrollTop; }
+function closeDetail(){detailModal.classList.remove('open');document.body.style.overflow=''}
+detailModal.querySelectorAll('[data-close]').forEach(x=>x.onclick=closeDetail);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetail()});
+galThumbs.onclick=e=>{const b=e.target.closest('button');if(b)setGal(+b.dataset.i)};
+entrada.oninput=e=>{ent=+e.target.value;calcP()};
+parcSelect.onclick=e=>{const b=e.target.closest('button');if(!b)return;
+nParc=+b.dataset.n;[...parcSelect.children].forEach(x=>x.classList.toggle('on',x===b));calcP()};
+dScore.onclick=e=>{e.preventDefault();closeDetail();openScoreFor(cur.id)};
+
+/* score — determinístico por CPF (mesmo CPF, mesmo resultado) */
+function cpfOk(c){c=c.replace(/\D/g,'');
+if(c.length!==11||/^(\d)\1+$/.test(c))return false;
+let s=0;for(let i=0;i<9;i++)s+=+c[i]*(10-i);let d=(s*10)%11;if(d===10)d=0;if(d!==+c[9])return false;
+s=0;for(let i=0;i<10;i++)s+=+c[i]*(11-i);let d2=(s*10)%11;if(d2===10)d2=0;return d2===+c[10]}
+function scoreDeCpf(cpf){const d=cpf.replace(/\D/g,'');let h=0;
+for(let i=0;i<11;i++)h=(h*31+d[i]*(i+7))%997;
+return 300+h%551} // 300 a 850
+
+const scoreForm=$('#scoreForm'),prog=$('#prog'),result=$('#result'),gaugeVal=$('#gaugeVal'),scoreNum=$('#scoreNum'),tierPill=$('#tierPill'),conds=$('#conds'),waScore=$('#waScore');
+const modeloSel=$('#modelo');
+modeloSel.innerHTML=MOTOS.map(m=>`<option value="${m.id}">${m.nome} — ${fmt(m.preco)}</option>`).join('');
+const cpfIn=$('#cpf');
+cpfIn.addEventListener('input',e=>{let v=e.target.value.replace(/\D/g,'').slice(0,11);
+v=v.replace(/^(\d{3})(\d)/,'$1.$2').replace(/^(\d{3})\.(\d{3})(\d)/,'$1.$2.$3').replace(/\.(\d{3})(\d{1,2})$/,'.$1-$2');
+e.target.value=v});
+$('#cpfTeste').onclick=()=>{cpfIn.value='529.982.247-25'};
+function openScoreFor(id){modeloSel.value=id;
+$('#score').scrollIntoView({behavior:'smooth'});
+setTimeout(()=>$('#nome').focus({preventScroll:true}),650)}
+let lastRun=null;
+scoreForm.onsubmit=e=>{e.preventDefault();
+const nome=$('#nome').value.trim();let ok=true;
+$('#fNome').classList.toggle('bad',!(nome.length>=3)||(ok=false)||null);
+const cpfBad=!cpfOk(cpfIn.value);
+$('#fCpf').classList.toggle('bad',cpfBad);
+if(nome.length<3||cpfBad)return;
+lastRun={nome,cpf:cpfIn.value,moto:modeloSel.value};
+scoreForm.style.display='none';result.style.display='none';prog.style.display='block';
+const steps=[...prog.querySelectorAll('.step')];steps.forEach(s=>s.className='step');
+let i=0;(function tick(){if(i>0)steps[i-1].classList.add('done');
+if(i<steps.length){steps[i].classList.add('active');i++;setTimeout(tick,950)}
+else setTimeout(showResult,450)})()};
+function showResult(){const {nome,cpf,moto:id}=lastRun;
+const m=MOTOS.find(x=>x.id===id);const sc=scoreDeCpf(cpf);
+const T=sc>=700?{c:'#3EE9C5',cls:'alto',l:'Pré-aprovação imediata',e:20,t:0.99}
+      :sc>=550?{c:'#C8FF3D',cls:'medio',l:'Pré-aprovação · entrada facilitada',e:30,t:1.39}
+      :{c:'#FF9F43',cls:'baixo',l:'Análise manual com consultor',e:40,t:1.99};
+prog.style.display='none';result.style.display='block';
+const L=Math.PI*88;gaugeVal.style.transition='none';
+gaugeVal.style.strokeDasharray=L;gaugeVal.style.strokeDashoffset=L;
+gaugeVal.style.stroke=T.c;void gaugeVal.getBoundingClientRect();
+gaugeVal.style.transition='stroke-dashoffset 1.3s cubic-bezier(.2,.7,.2,1)';
+gaugeVal.style.strokeDashoffset=L*(1-(sc-300)/550);
+let t0=null;requestAnimationFrame(function cu(ts){t0=t0||ts;
+const p=Math.min(1,(ts-t0)/900);scoreNum.textContent=Math.round(300+(sc-300)*p);
+if(p<1)requestAnimationFrame(cu)});
+tierPill.className='tier-pill '+T.cls;tierPill.textContent=T.l;
+const linha=Math.round((15000+(sc-300)*180)/1000)*1000;
+const parc=pmt(m.preco*(1-T.e/100),T.t/100,36);
+conds.innerHTML=
+`<div><dt>Linha de crédito estimada</dt><dd class="hl">${fmt(linha)}</dd></div>
+<div><dt>Sua condição — ${m.nome}</dt><dd class="hl">${T.e}% de entrada + 36× de ${fmt(parc)}</dd></div>
+<div><dt>Taxa promocional (demonstrativa)</dt><dd>${(T.t).toFixed(2).replace('.',',')}% a.m.</dd></div>
+<div><dt>Validade da proposta</dt><dd>7 dias úteis</dd></div>`;
+waScore.href=waLink(`Olá! Fiz a simulação de score no site (perfil ${sc}/850) e quero prosseguir com a ${m.nome}.`);
+result.scrollIntoView({behavior:'smooth',block:'nearest'})}
+$('#refazer').onclick=e=>{e.preventDefault();
+result.style.display='none';prog.style.display='none';
+const st=[...prog.querySelectorAll('.step')];st.forEach(s=>s.className='step');
+scoreForm.style.display='block'};
+
+/* faq */
+$('#faqBox').addEventListener('click',e=>{const b=e.target.closest('.faq-q');
+if(b)b.parentElement.classList.toggle('open')});
+
+/* menu mobile */
+$('#burger').onclick=()=>{$('#navLinks').classList.toggle('open');$('#burger').classList.toggle('x')};
+$$('#navLinks a').forEach(a=>a.onclick=()=>$('#navLinks').classList.remove('open'));
+
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){
+en.target.classList.add('in');
+if(en.target.id==='rankBox')en.target.querySelectorAll('.rank-bar i').forEach(b=>b.style.width=b.dataset.w+'%');
+io.unobserve(en.target)}}),{threshold:.15});
+$$('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

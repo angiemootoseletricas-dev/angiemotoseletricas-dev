@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- LOGO PLACEHOLDER — substitua este arquivo pela arte oficial da loja -->
+  <rect width="64" height="64" rx="16" fill="#141A23" stroke="#2C3A4E" stroke-width="2"/>
+  <path d="M37 5 L13 37 h13 L25 59 L51 25 H36 Z" fill="#C8FF3D"/>
+</svg>
